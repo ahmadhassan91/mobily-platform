@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Brand */
+  --mobily-cyan: #00A5D9;
+  --mobily-blue: #002C6A;
+  
+  /* Light Theme */
+  --bg-main: #EEF2F6;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --border-color: #E2E8F0;
+  --text-main: #0B1120;
+  --text-muted: #64748B;
+  --shadow-card: 0 16px 40px -12px rgba(0, 44, 106, 0.08), 0 2px 8px rgba(0,0,0,0.02);
+
+  --badge-success-bg: rgba(16,185,129,0.1);
+  --badge-success-text: #059669;
+  --badge-warning-bg: rgba(245,158,11,0.1);
+  --badge-warning-text: #d97706;
+  --badge-error-bg: rgba(239,68,68,0.1);
+  --badge-error-text: #dc2626;
+}
+
+.dark {
+  /* Dark Theme */
+  --bg-main: #070B14;
+  --bg-surface: #0B1120;
+  --bg-card: #131A2B;
+  --border-color: rgba(255, 255, 255, 0.06);
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --shadow-card: 0 10px 40px -10px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0,0,0,0.5);
+
+  --badge-success-bg: rgba(16,185,129,0.15);
+  --badge-success-text: #4ade80;
+  --badge-warning-bg: rgba(245,158,11,0.15);
+  --badge-warning-text: #fbbf24;
+  --badge-error-bg: rgba(239,68,68,0.15);
+  --badge-error-text: #f87171;
+}
+
+html, body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Card Style */
+.premium-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -10px rgba(0, 165, 217, 0.12);
+}
+.dark .premium-card:hover {
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 165, 217, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+.animate-fade-in-delay-1 { animation: fadeIn 0.4s ease-out 0.1s both; }
+.animate-fade-in-delay-2 { animation: fadeIn 0.4s ease-out 0.2s both; }
+.animate-fade-in-delay-3 { animation: fadeIn 0.4s ease-out 0.3s both; }
+.animate-fade-in-delay-4 { animation: fadeIn 0.4s ease-out 0.4s both; }
