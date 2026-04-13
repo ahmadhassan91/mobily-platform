@@ -107,10 +107,10 @@ export default function AICopilot() {
              </div>
              <div>
                <h3 className="font-bold text-sm tracking-tight flex items-center gap-2">
-                 Supply Copilot
+                 Mobily Co-pilot
                  <span className="px-1.5 py-0.5 rounded-full bg-emerald-500 text-white text-[9px] uppercase tracking-widest">Active</span>
                </h3>
-               <p className="text-xs text-white/80 font-medium leading-none">Powered by Oracle AI</p>
+               <p className="text-xs text-white/80 font-medium leading-none">Powered by Clustox AI</p>
              </div>
           </div>
           <button 
