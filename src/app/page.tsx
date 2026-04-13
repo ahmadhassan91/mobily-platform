@@ -7,9 +7,11 @@ import InventoryMonitor from '@/components/InventoryMonitor';
 import OrderTracker from '@/components/OrderTracker';
 import AIRecommendations from '@/components/AIRecommendations';
 import ROITracker from '@/components/ROITracker';
+import DataIntegrationFlow from '@/components/DataIntegrationFlow';
+import AICopilot from '@/components/AICopilot';
 import { Bell, Search, Calendar } from 'lucide-react';
 
-type ActiveTab = 'overview' | 'inventory' | 'orders' | 'ai' | 'roi';
+type ActiveTab = 'overview' | 'integration' | 'inventory' | 'orders' | 'ai' | 'roi';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
@@ -69,13 +71,13 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Page Content */}
-        <main className="flex-1 p-8 overflow-auto max-w-7xl mx-auto w-full">
-          {activeTab === 'overview'   && <OverviewDashboard />}
-          {activeTab === 'inventory'  && <InventoryMonitor />}
-          {activeTab === 'orders'     && <OrderTracker />}
-          {activeTab === 'ai'         && <AIRecommendations />}
-          {activeTab === 'roi'        && <ROITracker />}
+        <main className="flex-1 p-8 overflow-auto max-w-7xl mx-auto w-full relative">
+          {activeTab === 'overview'    && <OverviewDashboard />}
+          {activeTab === 'integration' && <DataIntegrationFlow />}
+          {activeTab === 'inventory'   && <InventoryMonitor />}
+          {activeTab === 'orders'      && <OrderTracker />}
+          {activeTab === 'ai'          && <AIRecommendations />}
+          {activeTab === 'roi'         && <ROITracker />}
         </main>
 
         {/* Footer */}
@@ -83,8 +85,10 @@ export default function Home() {
           className="px-8 py-5 flex items-center justify-between text-xs font-medium border-t border-[var(--border-color)] text-[var(--text-muted)]"
         >
           <span>Mobily Supply Intelligence Platform · v1.0</span>
-          <span>Powered by Oracle Fusion · AI Engine Active</span>
         </footer>
+
+        {/* Global AI Copilot Widget */}
+        <AICopilot />
       </div>
     </div>
   );

@@ -14,13 +14,15 @@ import {
   X,
   ChevronRight,
   Sun,
-  Moon
+  Moon,
+  Network
 } from 'lucide-react';
 import clsx from 'clsx';
 import { useTheme } from './ThemeProvider';
 
 const navItems = [
   { id: 'overview',      label: 'Overview',        icon: LayoutDashboard },
+  { id: 'integration',   label: 'Integration Map', icon: Network },
   { id: 'inventory',     label: 'Inventory',        icon: Package },
   { id: 'orders',        label: 'Orders',           icon: ShoppingCart },
   { id: 'ai',            label: 'AI Recommendations', icon: Brain },
