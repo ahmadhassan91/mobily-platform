@@ -166,9 +166,13 @@ export default function Sidebar({ active, onChange }: SidebarProps) {
                 H
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-[var(--bg-card)] rounded-full" />
               </div>
-              <div className="min-w-0">
-                <p style={{ color: 'var(--text-main)', fontSize: 14, fontWeight: 700 }} className="truncate">Hassan Al Emam</p>
-                <p style={{ color: 'var(--text-muted)', fontSize: 12, fontWeight: 500 }} className="truncate">Supply Chain Director</p>
+              <div className="min-w-0 flex-1">
+                <p style={{ color: 'var(--text-main)', fontSize: 13, fontWeight: 700 }} className="truncate" title="Hassan Shaaban Alemam">
+                  Hassan Shaaban Alemam
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: 11, fontWeight: 500 }} className="truncate" title="Director - Supply Chain Planning & Ordering | Inventory Management">
+                  Director - Supply Chain Planning & Ordering | Inventory Management
+                </p>
               </div>
             </div>
           )}
